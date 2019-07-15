@@ -1,7 +1,7 @@
 {
 	"ImportPath": "github.com/heroku/docker-registry-client",
-	"GoVersion": "go1.7",
-	"GodepVersion": "v79",
+	"GoVersion": "go1.12",
+	"GodepVersion": "v80",
 	"Packages": [
 		"./..."
 	],
