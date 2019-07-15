@@ -61,11 +61,7 @@ func (registry *Registry) ManifestV2(repository, reference string) (*manifestV2.
 	if err != nil {
 		return nil, err
 	}
-	contentType := ""
-	contentTypes := resp.Header["Content-Type"]
-	if len(contentTypes) > 0 {
-		contentType = contentTypes[0]
-	}
+	contentType := resp.Header.Get("Content-Type")
 
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
